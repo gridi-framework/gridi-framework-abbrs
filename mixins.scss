@@ -1,0 +1,43 @@
+//Abbr
+//@mixin abbr-extra-colors-propertys($colors-map) {} //Create this mixin before import module when you want add some special colors style for element
+
+@mixin abbr-colors-propertys($colors-map) {
+    @include property-from-map($colors-map, text-decoration-color);
+    @if mixin-exists(abbr-extra-colors-propertys) {
+        @include abbr-extra-colors-propertys($colors-map);
+    }
+}
+
+@mixin abbr-colors($colors-map) {
+    abbr {
+        @include abbr-colors-propertys($colors-map);
+    }
+}
+
+@mixin class-abbr-colors($class, $colors-map) {
+    abbr.#{$class} {
+        @include abbr-colors-propertys($colors-map);
+    }
+}
+
+//Abbr[title]
+//@mixin abbr-with-title-extra-colors-propertys($colors-map) {} //Create this mixin before import module when you want add some special colors style for element
+
+@mixin abbr-with-title-colors-propertys($colors-map) {
+    @include property-from-map($colors-map, text-decoration-color);
+    @if mixin-exists(abbr-with-title-extra-colors-propertys) {
+        @include abbr-with-title-extra-colors-propertys($colors-map);
+    }
+}
+
+@mixin abbr-with-title-colors($colors-map) {
+    abbr[title] {
+        @include abbr-with-title-colors-propertys($colors-map);
+    }
+}
+
+@mixin class-abbr-with-title-colors($class, $colors-map) {
+    abbr[title].#{$class} {
+        @include abbr-with-title-colors-propertys($colors-map);
+    }
+}

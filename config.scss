@@ -1,0 +1,13 @@
+//Abbr
+$abbr-text-decoration-line: none !default;
+$abbr-text-decoration-style: null !default;
+$abbr-text-decoration-color: null !default;
+//@mixin abbr-extra-style() {} //Create this mixin before import module when you want add some special style for element
+
+//Abbr[title]
+$abbr-with-title-cursor: help !default;
+$abbr-with-title-display: inline-block !default;
+$abbr-with-title-text-decoration-line: underline !default;
+$abbr-with-title-text-decoration-style: dotted !default;
+$abbr-with-title-text-decoration-color: null !default;
+//@mixin abbr-with-title-extra-style() {} //Create this mixin before import module when you want add some special style for element

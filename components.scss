@@ -1,0 +1,22 @@
+abbr {
+    @include text-decoration-shorthand((
+        line: $abbr-text-decoration-line,
+        style: $abbr-text-decoration-style,
+        color: $abbr-text-decoration-color,
+        make-shorthand: true
+    ));
+    @if mixin-exists(abbr-extra-style) {
+        @include abbr-extra-style();
+    }
+}
+
+abbr[title] {
+    cursor: $abbr-with-title-cursor;
+    display: $abbr-with-title-display;
+    @include text-decoration-shorthand((
+        line: $abbr-with-title-text-decoration-line,
+        style: $abbr-with-title-text-decoration-style,
+        color: $abbr-with-title-text-decoration-color,
+        make-shorthand: true
+    ));
+}
